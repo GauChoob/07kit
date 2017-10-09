@@ -19,3 +19,15 @@ We also have a Discord dedicated to the users and developers of 07Kit.
 You can join our Discord by clicking [here](https://discord.gg/ZvzSMGZ).
 
 See you soon!
+
+## BHP
+
+1.02:
+Updated for new hp bars
+1st Action Overlay appears to be broken so disabled   
+
+1.01:
+Customizable settings for all overlays
+
+1.00:
+Base

@@ -1,0 +1,73 @@
+Put "final" on all constant values
+
+
+->keep track of points
+->Test wave/round data
+
+
+
+//Fix wave widget render
+
+Tick/tock draw graphics
+Show leech points to avoid blackboard
+is30s tick
+Bug: end round halfway through doesn't wipe the rest of the round
+
+
+
+Ready for release:
+
+BATile
+    findAttackSlot takes 50 ms. Somehow make faster? Also remove for loop
+Runner
+InventoryGraphics
+Penance
+PoisonTick
+    Get color
+Cons
+GameState
+CallWidget
+    Make sure WaveInterrupted works
+    Verify getInGameWave() works (not necessary for release)
+Healer
+HealerRole
+
+
+
+
+Does not support arrow waves
+
+    Attacker:
+        Highlight correct style to use for all common items/weapons used in current meta based on call
+        Mobs spawn/Max mob count/Mobs left to spawn
+        Untagged fight/range (purple circle)
+        Mob last seen east/south
+        Mob aggroed to def/healer
+        Healer aggros
+        Draw aggro lines for start of wave & later
+    Def:
+        Eastie runner blocks
+        Crashed runners
+        Unsafe multi tiles
+        Tick counts
+        Healer aggros
+    Col:
+        Points for leech
+        Number of left click+total number of eggs
+
+        //Draws circle at location
+        /*Polygon mt=player.getTile().getPolygon();
+        g2d.setColor(new Color(255, 0, 255, 50));
+        int ax=Arrays.stream(mt.xpoints).sum()/4;
+        int ay=Arrays.stream(mt.ypoints).sum()/4;
+        double pointtoline1=Math.abs((mt.ypoints[1]-mt.ypoints[0])*ax-(mt.xpoints[1]-mt.xpoints[0])*ay+mt.xpoints[1]*mt.ypoints[0]-mt.xpoints[0]*mt.ypoints[1])/(Math.sqrt((mt.ypoints[1]-mt.ypoints[0])*(mt.ypoints[1]-mt.ypoints[0])+(mt.xpoints[1]-mt.xpoints[0])*(mt.xpoints[1]-mt.xpoints[0])));
+        double pointtoline2=Math.abs((mt.ypoints[2]-mt.ypoints[1])*ax-(mt.xpoints[2]-mt.xpoints[1])*ay+mt.xpoints[2]*mt.ypoints[1]-mt.xpoints[1]*mt.ypoints[2])/(Math.sqrt((mt.ypoints[2]-mt.ypoints[1])*(mt.ypoints[2]-mt.ypoints[1])+(mt.xpoints[2]-mt.xpoints[1])*(mt.xpoints[2]-mt.xpoints[1])));
+        pointtoline1=Math.min(pointtoline1,pointtoline2);
+        g2d.fill(new Ellipse2D.Double(ax-pointtoline1,ay-pointtoline1,pointtoline1*2,pointtoline1*2));*/
+
+
+Scroll bug mechanics:
+Non-scroll have teammate exited early pop-up: no bug on qs
+Non-scroll have points pop-up: no bug on qs
+
+

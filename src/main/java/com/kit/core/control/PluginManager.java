@@ -8,6 +8,7 @@ import com.kit.core.Session;
 import com.kit.plugins.*;
 import com.kit.plugins.afk.AFKMentionNotifierPlugin;
 import com.kit.plugins.afk.AFKWatcherPlugin;
+import com.kit.plugins.barbarianassault.BarbarianAssaultPlugin;
 import com.kit.plugins.clan.ClanPlugin;
 import com.kit.plugins.combat.*;
 import com.kit.plugins.debugger.DebugPlugin;
@@ -75,57 +76,59 @@ public final class PluginManager {
         try {
 //            plugins.add(new SocialStreamPlugin(this));
 //            plugins.add(new QuickHopPlugin(this));
-            plugins.add(new HiscorePlugin(this));
-            plugins.add(new GrandExchangePlugin(this));
-            plugins.add(new XPTrackerPlugin(this));
-            plugins.add(new NotesPlugin(this));
-
-
-            plugins.add(new DebugPlugin(this));
-
-            plugins.add(new InventoryMarkerPlugin(this));
-
-            plugins.add(new ClanPlugin(this));
-
-            plugins.add(new LootOverlayPlugin(this));
-            plugins.add(new CombatPlugin(this));
-            plugins.add(new FishingPlugin(this));
-            plugins.add(new RememberMeOverlayPlugin(this));
-            plugins.add(new WoodcuttingOverlayPlugin(this));
-            plugins.add(new MiningOverlayPlugin(this));
-            plugins.add(new BoostsOverlayPlugin(this));
-            plugins.add(new RunecraftingOverlayPlugin(this));
-            plugins.add(new BankValuatorPlugin(this));
-            plugins.add(new FirstActionOverlayPlugin(this));
-            plugins.add(new FoodOverlayPlugin(this));
-            plugins.add(new NpcMarkerOverlayPlugin(this));
-            plugins.add(new AgilityOverlayPlugin(this));
+//            plugins.add(new HiscorePlugin(this));
+//            plugins.add(new GrandExchangePlugin(this));
+//            plugins.add(new XPTrackerPlugin(this));
+//            plugins.add(new NotesPlugin(this));
+//
+//
+//            plugins.add(new DebugPlugin(this));
+//
+//            plugins.add(new InventoryMarkerPlugin(this));
+//
+//            plugins.add(new ClanPlugin(this));
+//
+//            plugins.add(new LootOverlayPlugin(this));
+//            plugins.add(new CombatPlugin(this));
+//            plugins.add(new FishingPlugin(this));
+//            plugins.add(new RememberMeOverlayPlugin(this));
+//            plugins.add(new WoodcuttingOverlayPlugin(this));
+//            plugins.add(new MiningOverlayPlugin(this));
+//            plugins.add(new BoostsOverlayPlugin(this));
+//            plugins.add(new RunecraftingOverlayPlugin(this));
+//            plugins.add(new BankValuatorPlugin(this));
+           // plugins.add(new FirstActionOverlayPlugin(this));
+//            plugins.add(new FoodOverlayPlugin(this));
+//            plugins.add(new NpcMarkerOverlayPlugin(this));
+//            plugins.add(new AgilityOverlayPlugin(this));
             //plugins.add(new CannonOverlayPlugin(this));
-            plugins.add(new NpcKillCounterOverlayPlugin(this));
-            plugins.add(new KillCounterOverlayPlugin(this));
-            plugins.add(new LootProfitAndDropRecorder(this));
-            plugins.add(new TradeOverlayPlugin(this));
-            plugins.add(new WintertodtPlugin(this));
-
-            plugins.add(new LevelUpCapturerPlugin(this));
-            plugins.add(new QuickChatPlugin(this));
-            plugins.add(new ItemExaminePricePlugin(this));
-            plugins.add(new FriendClanChatMinimapMarkerPlugin(this));
+//            plugins.add(new NpcKillCounterOverlayPlugin(this));
+//            plugins.add(new KillCounterOverlayPlugin(this));
+//            plugins.add(new LootProfitAndDropRecorder(this));
+//            plugins.add(new TradeOverlayPlugin(this));
+//            plugins.add(new WintertodtPlugin(this));
+//
+//            plugins.add(new LevelUpCapturerPlugin(this));
+//            plugins.add(new QuickChatPlugin(this));
+//            plugins.add(new ItemExaminePricePlugin(this));
+//            plugins.add(new FriendClanChatMinimapMarkerPlugin(this));
 //            plugins.add(new ClueScrollPlugin(this));
 
-            plugins.add(new IdleNotifierPlugin(this));
-            plugins.add(new LogoutNotifierPlugin(this));
-            plugins.add(new AFKMentionNotifierPlugin(this));
-            plugins.add(new TradeNotifierPlugin(this));
+//            plugins.add(new IdleNotifierPlugin(this));
+//            plugins.add(new LogoutNotifierPlugin(this));
+//            plugins.add(new AFKMentionNotifierPlugin(this));
+//            plugins.add(new TradeNotifierPlugin(this));
 
 //            plugins.add(new WorldMapPlugin(this));
 //            plugins.add(new DeathMarkerPlugin(this));
 
-            plugins.add(new PlayerStatsPlugin(this));
+//            plugins.add(new PlayerStatsPlugin(this));
+//
+//            plugins.add(new TwitchChatPlugin(this));
+//
+//            plugins.add(new AFKWatcherPlugin(this));
 
-            plugins.add(new TwitchChatPlugin(this));
-
-            plugins.add(new AFKWatcherPlugin(this));
+            plugins.add(new BarbarianAssaultPlugin(this));
 
             lifecycleManager.scheduleAtFixedRate(this::updateLifecycle, 0, 500, TimeUnit.MILLISECONDS);
         } catch (Exception e) {
