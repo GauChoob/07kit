@@ -64,7 +64,7 @@ public class BarbarianAssaultPlugin extends Plugin {
 
     @Override
     public String getName() {
-        return "BA Helper 1.02";
+        return "BA Helper 1.03";
     }   //Interface name
 
     @Override

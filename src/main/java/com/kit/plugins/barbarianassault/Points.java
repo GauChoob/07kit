@@ -236,7 +236,7 @@ public class Points {
             switch(role) {
                 case Cons.A:
                     addedPoints += pInfo[INFO_FAILED_ATTACKS];
-                    System.out.println("A:"+pInfo[INFO_FAILED_ATTACKS]);
+                    //System.out.println("A:"+pInfo[INFO_FAILED_ATTACKS]);
                     break;
                 case Cons.C:
                     addedPoints += pInfo[INFO_EGGS_COLLECTED];
@@ -294,7 +294,7 @@ public class Points {
                 if(parent==null){
                     return false;
                 }
-                scrapePrintData(parent);  //TODO temp remove one day
+                //scrapePrintData(parent);  //TODO temp remove one day
                 needWaveData=false;
                 return false;
             }
