@@ -264,7 +264,7 @@ public class Points {
                 if(parent==null){
                     return false;
                 }
-                scrapePrintData(parent);  //TODO temp remove one day
+                //scrapePrintData(parent);  //TODO temp remove one day
                 nInfo[INFO_RUNNERS_PAST]=Integer.parseInt(new Widget(Session.get(),parent[N_RUNNERS_PAST],POINTS_WIDGET,N_RUNNERS_PAST).getText());
                 nInfo[INFO_HP_REPLENISHED]=Integer.parseInt(new Widget(Session.get(),parent[N_HP_REPLENISHED],POINTS_WIDGET,N_HP_REPLENISHED).getText());
                 nInfo[INFO_WRONG_POISON_PACKS]=Integer.parseInt(new Widget(Session.get(),parent[N_WRONG_POISON_PACKS],POINTS_WIDGET,N_WRONG_POISON_PACKS).getText());

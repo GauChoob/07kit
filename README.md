@@ -1,5 +1,9 @@
 ## BHP
 
+1.04:
+Fixed bug where sometimes it misread what role you were playing
+Removed automatic recording of wave points into .txt files
+
 1.03:
 Updated hooks for 2017/10/20
 

@@ -57,6 +57,7 @@ public class BarbarianAssaultPlugin extends Plugin {
     CollectorRole collectorRole;
     Points points;
     TextCommands textCommands;
+    Role role;
 
     public BarbarianAssaultPlugin(PluginManager manager) {
         super(manager);
@@ -64,7 +65,7 @@ public class BarbarianAssaultPlugin extends Plugin {
 
     @Override
     public String getName() {
-        return "BA Helper 1.03";
+        return "BA Helper 1.04";
     }   //Interface name
 
     @Override
@@ -81,6 +82,7 @@ public class BarbarianAssaultPlugin extends Plugin {
         healerRole=new HealerRole(this);
         points=new Points(this);
         textCommands=new TextCommands(this);
+        role=new Role(this);
     }
 
     @Override
@@ -108,12 +110,14 @@ public class BarbarianAssaultPlugin extends Plugin {
                     defenderRole.startedNewWave();
                     healerRole.startedNewWave();
                     points.startedNewWave();
+                    role.startedNewWave();
                 }
 
                 callWidget.updateFoodCall();
 
                 long waveProgressTime=currentTime-waveRoundData.getWaveStartTime();
-                switch(callWidget.getPlayerRole()){
+                switch(role.getPlayerRole()){
+                //switch(callWidget.getPlayerRole()){
                     case Cons.A:
                         attackRole.Cycle(waveProgressTime);
                         break;
@@ -170,6 +174,7 @@ public class BarbarianAssaultPlugin extends Plugin {
         //baTile.Debug(g2d); //Shows current x/y coordinate
         //waveRoundData.Debug(g2d); //Shows current x/y coordinate
         //points.drawRoundInfo(g2d);
+        //role.Debug(g2d);
 
         if (pluginloaded){
             if(!gameState.isAtBA()){
@@ -178,7 +183,8 @@ public class BarbarianAssaultPlugin extends Plugin {
             long currentTime=System.nanoTime();
             long waveProgressTime=currentTime-waveRoundData.getWaveStartTime();
             if(gameState.isIngame()){
-                switch(callWidget.getPlayerRole()) {
+                switch(role.getPlayerRole()){
+                //switch(callWidget.getPlayerRole()) {
                     case Cons.A:
                         attackRole.PaintEvent(g2d,waveProgressTime);
                         break;
@@ -236,8 +242,10 @@ public class BarbarianAssaultPlugin extends Plugin {
         if(event.getSender().equals(player.getName())){
             textCommands.ProcessCommand(event.getMessage());
         }
-        switch(callWidget.getPlayerRole()) {
+        switch(role.getPlayerRole()){
+        //switch(callWidget.getPlayerRole()) {
             case Cons.A:
+                break;
             case Cons.C:
                 collectorRole.MessageEvent(event);
                 break;
